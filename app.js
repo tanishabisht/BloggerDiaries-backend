@@ -21,7 +21,7 @@ app.use(cookieParser());
 
 
 // database connection
-const dbURI = 'mongodb+srv://tanishabisht:welcome1@cluster0.pxmdv.mongodb.net/bloggerDiary?retryWrites=true&w=majority';
+const dbURI = process.env.DB_URI
 const PORT = process.env.PORT || 3000
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then(() => app.listen(PORT))

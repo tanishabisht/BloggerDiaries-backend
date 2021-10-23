@@ -1,12 +1,12 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-
+require('dotenv').config()
 
 
 const requireAuth = (req, res, next) => {
   const token = req.headers.authorization;
   if (token) {
-    jwt.verify(token, 'my-secret-token-to-change-in-production', (err, decodedToken) => {
+    jwt.verify(token, process.env.SECRET_TOKEN, (err, decodedToken) => {
       if (err) {
         res.status(401).json({mssg: err.message, err});
       } else {

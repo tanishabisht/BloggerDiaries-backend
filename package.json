@@ -1,7 +1,7 @@
 {
-  "name": "node-express-jwt-auth",
+  "name": "blogger-diaries-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "backend for blogger diaries in nodejs",
   "main": "app.js",
   "engines": {
     "node": "12.11.1"
